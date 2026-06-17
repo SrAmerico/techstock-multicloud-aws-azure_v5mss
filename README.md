@@ -20,7 +20,7 @@ Esta entrega contempla o planejamento da arquitetura AWS do projeto TechStock Mu
 ### Camada de Aplicação
 
 - EC2 Backend (Node.js)
-- EC2 Frontend (Nginx)
+- S3 Bucket Frontend
 - EC2 Monitoring (Prometheus e Grafana)
 
 ### Camada de Dados
@@ -59,7 +59,8 @@ O levantamento de custos foi realizado utilizando o AWS Pricing Calculator consi
 
 | Serviço | Função |
 |----------|----------|
-| Amazon EC2 | Backend, Frontend e Monitoring |
+| Amazon EC2 | Backend Monitoring |
+| Amazon S3 | Frontend|
 | Amazon RDS PostgreSQL | Banco de dados |
 | AWS Secrets Manager | Gerenciamento de credenciais |
 | Application Load Balancer | Balanceamento de tráfego |
