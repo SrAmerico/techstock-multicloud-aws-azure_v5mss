@@ -72,10 +72,6 @@ O levantamento de custos foi realizado utilizando o AWS Pricing Calculator consi
 
 A estimativa contempla todos os componentes necessários para suportar a arquitetura proposta no projeto, incluindo serviços de computação, banco de dados, segurança, balanceamento de carga e conectividade híbrida entre provedores de nuvem.
 
-> Inserir imagem da AWS Pricing Calculator nesta seção.
-
-> Inserir PDF detalhado do levantamento de custos.
-
 ### Relatório de Custos
 
 > Inserir PDF do levantamento de custos realizado na AWS Pricing Calculator.
