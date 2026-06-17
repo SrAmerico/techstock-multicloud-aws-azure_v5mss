@@ -51,6 +51,31 @@ Esta entrega contempla o planejamento da arquitetura AWS do projeto TechStock Mu
 
 > Inserir imagem da estimativa de custos aqui
 
+# 💰 Levantamento de Custos AWS
+
+O levantamento de custos foi realizado utilizando o AWS Pricing Calculator considerando a arquitetura prevista para a entrega AWS.
+
+## Serviços considerados
+
+| Serviço | Função |
+|----------|----------|
+| Amazon EC2 | Backend, Frontend e Monitoring |
+| Amazon RDS PostgreSQL | Banco de dados |
+| AWS Secrets Manager | Gerenciamento de credenciais |
+| Application Load Balancer | Balanceamento de tráfego |
+| NAT Gateway | Saída segura das sub-redes privadas |
+| Site-to-Site VPN | Comunicação entre AWS e Azure |
+
+## Resultado da Estimativa
+
+**Custo mensal estimado:** USD 162,37
+
+A estimativa contempla todos os componentes necessários para suportar a arquitetura proposta no projeto, incluindo serviços de computação, banco de dados, segurança, balanceamento de carga e conectividade híbrida entre provedores de nuvem.
+
+> Inserir imagem da AWS Pricing Calculator nesta seção.
+
+> Inserir PDF detalhado do levantamento de custos.
+
 ### Relatório de Custos
 
 > Inserir PDF do levantamento de custos realizado na AWS Pricing Calculator.
