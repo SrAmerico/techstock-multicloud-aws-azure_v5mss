@@ -1,149 +1,104 @@
----
+--------------------------------------------------------------Entrega AWS Full (19/06/2026)----------------------------------------------------------------------------------------------------
 
-# 🚀 Entrega AWS Full (19/06/2026)
-
-Esta etapa contempla a implantação funcional da infraestrutura AWS do projeto TechStock, incluindo frontend, backend, banco de dados, balanceamento de carga, segurança de rede e preparação da conectividade híbrida com a Microsoft Azure.
-
-## Objetivos concluídos nesta etapa
-
-- Implantação do backend Node.js em instâncias EC2 privadas;
-- Implantação do frontend utilizando Amazon S3 Static Website Hosting;
-- Configuração do Amazon RDS PostgreSQL;
-- Implementação do Application Load Balancer (ALB);
-- Configuração de NAT Gateway para acesso seguro à internet;
-- Configuração de Security Groups e regras de acesso;
-- Integração completa entre Frontend, Backend e Banco de Dados;
-- Configuração da infraestrutura necessária para VPN Site-to-Site AWS ↔ Azure;
-- Validação operacional da aplicação TechStock.
+Esta etapa contempla a implantação completa da infraestrutura AWS do projeto TechStock, incluindo frontend, backend, banco de dados, balanceamento de carga, segurança e conectividade interna.
 
 ---
 
-## Recursos Implantados
+Objetivos concluídos
 
-### Camada de Aplicação
+      * Implantação do frontend em Amazon S3;
+      * Implantação do backend em Amazon EC2;
+      * Configuração do banco de dados em Amazon RDS com PostgreSQL;
+      * Implementação do AWS Elastic Load Balancing;
+      * Configuração do NAT Gateway;
+      * Configuração do Bastion Host;
+      * Implementação de Security Groups;
+      * Integração com AWS Secrets Manager;
+      * Validação completa da comunicação entre frontend, backend e banco de dados.
 
-#### Backend
+---
 
-- 2 instâncias EC2 privadas
-- Aplicação Node.js TechStock
-- Porta 3000 liberada para o Load Balancer
-- Health Check operacional
+Recursos implantados:
 
-Status: ✅ Concluído
+Frontend
 
-#### Frontend
-
-- Hospedado em Amazon S3
-- Static Website Hosting habilitado
-- Interface TechStock publicada
+      * Hospedagem estática no S3;
+      * Publicação da interface TechStock;
+      * Integração com backend via DNS do ALB.
 
 Status: ✅ Concluído
 
 ---
 
-### Camada de Banco de Dados
+Backend
 
-#### Amazon RDS PostgreSQL
-
-Banco:
-
-- PostgreSQL
-- Banco TechStock operacional
-- Conexão SSL habilitada
-- Integração validada com backend
+      * 2 instâncias EC2 privadas;
+      * Aplicação Node.js em execução;
+      * Balanceamento de carga configurado.
 
 Status: ✅ Concluído
 
 ---
 
-### Camada de Rede
+Banco de Dados
 
-#### Amazon VPC
-
-- VPC configurada
-- Sub-redes públicas e privadas
-- Route Tables configuradas
-- Internet Gateway configurado
-
-Status: ✅ Concluído
-
-#### NAT Gateway
-
-Responsável por permitir acesso à internet para instâncias privadas sem exposição direta.
-
-Status: ✅ Concluído
-
-#### Application Load Balancer (ALB)
-
-Responsável pelo roteamento do tráfego para as instâncias de backend.
-
-Configurações:
-
-- Target Group: tg-backend-v5
-- Porta: 3000
-- Health Check habilitado
-
-Resultado:
-
-- Backend 1 → Healthy
-- Backend 2 → Healthy
+      * RDS PostgreSQL configurado;
+      * Banco operacional e integrado ao backend.
 
 Status: ✅ Concluído
 
 ---
 
-### Segurança
+Rede
 
-#### Security Groups
-
-Regras implementadas para:
-
-- Backend
-- Banco de Dados
-- Bastion Host
-- Load Balancer
-
-Status: ✅ Concluído
-
-#### AWS Secrets Manager
-
-Estrutura definida para armazenamento seguro de credenciais.
+      * VPC criada (`10.10.0.0/16`);
+      * Sub-redes públicas e privadas configuradas;
+      * Route Tables configuradas;
+      * Internet Gateway configurado;
+      * NAT Gateway configurado.
 
 Status: ✅ Concluído
 
 ---
 
-### Acesso Administrativo
+Load Balancer
 
-#### Bastion Host
-
-Instância pública utilizada para administração das instâncias privadas.
-
-Nome:
-
-- bastion-v5
-
-Função:
-
-- SSH seguro
-- Acesso à rede privada
+      * ALB configurado;
+      * Target Group configurado;
+      * Health Check validado;
+      * 2 instâncias saudáveis.
 
 Status: ✅ Concluído
 
 ---
 
-## Evidências da Implantação
+Segurança
 
-### Frontend Publicado no Amazon S3
+      * Security Groups aplicados;
+      * Bastion Host configurado;
+      * Secrets Manager integrado.
 
-> Inserir screenshot da aplicação TechStock carregada pelo endpoint S3.
+Status: ✅ Concluído
 
-### Backend Integrado ao Banco de Dados
+---
 
-Validação realizada através do painel da aplicação.
+Evidências
 
-Resultado observado:
+      * Frontend publicado e acessível;
+      * Backend respondendo via ALB;
+      * Banco conectado com sucesso;
+      * Target Group com instâncias saudáveis;
+      * Fluxo completo validado.
 
-```text
-✅ OK - DB conectado
-Host: ip-10-10-1-7
+---
+
+Status Final
+
+✅ Frontend operacional
+✅ Backend operacional
+✅ Banco operacional
+✅ Load Balancer operacional
+✅ NAT Gateway operacional
+✅ Bastion operacional
+✅ Segurança aplicada
+✅ Ambiente validado
